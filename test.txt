@@ -1,0 +1,41 @@
+1、nginx
+2、jms
+3、hm
+4、hs
+5、hc
+
+
+sh:
+shell/common_unzip.sh software/apache-tomcat-7.0.67.tar.gz /home/apache-tomcat-7.0.67-sh
+shell/common_unzip.sh /home/apache-tomcat-7.0.67-sh/webapps/sh_service_registry.war /home/apache-tomcat-7.0.67-sh/webapps/sh_service_registry
+shell/common_unzip.sh /home/apache-tomcat-7.0.67-sh/webapps/sh_service_registry_adapter.war /home/apache-tomcat-7.0.67-sh/webapps/sh_service_registry_adapter
+
+cat /etc/redhat-release
+
+[root@localhost ~]# chkconfig --list 显示开机可以自动启动的服务
+[root@localhost ~]# chkconfig --add *** 添加开机自动启动***服务
+[root@localhost ~]# chkconfig --del *** 删除开机自动启动***服务
+
+vi /etc/sysconfig/iptables
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 27017 -j ACCEPT
+
+/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
+
+java.net.NoRouteToHostException
+
+reboot
+
+mongod --fork --dbpath /data/mongodata/ --logpath /var/log/mongodb.log
+mongod --shutdown --dbpath /data/mongodata/
+
+vi /etc/rc.local
+/var/lib/mongodb/bin/mongod --fork --dbpath /data/mongodata/ --logpath /var/log/mongodb.log --journal
+
+chkconfig  --list
+chkconfig  nfs on
+
+server 192.26.8.72:8888 weight=1;
+
+123804902@qq.com
+
+http://192.26.28.66:9050/mdm/mdm?wsdl
